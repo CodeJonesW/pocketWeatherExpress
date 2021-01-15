@@ -9,7 +9,7 @@ const weatherRouter = require('./routes/weather');
 
 const app = express();
 
-const PORT = process.env.PORT || 3000
+// const PORT = process.env.PORT || 3000
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -36,6 +36,4 @@ app.use(function(req, res, next) {
 //   // res.json('error');
 // });
 
-app.listen(PORT, () => {
-      console.log(`App running on port ${PORT}!`);
-});
+module.exports = app;
